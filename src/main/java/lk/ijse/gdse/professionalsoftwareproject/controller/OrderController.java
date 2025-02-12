@@ -206,8 +206,50 @@ public class OrderController implements Initializable {
     @FXML
     void cmdProductOnAction(ActionEvent event) throws SQLException, ClassNotFoundException {
         ProductDTO productDTO = productBO.findProduct(cmbPrdId.getValue());
+
+        ArrayList<CartTM> items = new ArrayList<>(tblCart.getItems());
+
+
+//
+//        if (items.size() != 0) {
+//            System.out.println("This is cmb product inside if");
+//            for (CartTM item : items) {
+//                if (item.getProductId().equals(productDTO.getProductId())) {
+//                    lblQtyOnHand.setText(String.valueOf(productDTO.getQtyOnHand() - item.getQuantity()));
+//                }
+//            }
+//        } else {
+//            System.out.println("This is lblQtyOnHand");
+//            lblQtyOnHand.setText(String.valueOf(productDTO.getQtyOnHand()));
+//        }
+//
+
+
+
         if (productDTO != null) {
-            lblQtyOnHand.setText(String.valueOf(productDTO.getQtyOnHand()));
+
+            //System.out.println(productDTO);
+
+            if (items.size() != 0) {
+
+                boolean flag = false;
+
+                for (CartTM item : items) {
+                    if (item.getProductId().equals(productDTO.getProductId())) {
+                        lblQtyOnHand.setText(String.valueOf(productDTO.getQtyOnHand() - item.getQuantity()));
+                        flag = true;
+                    }
+                }
+                if (!flag) {
+                    lblQtyOnHand.setText(String.valueOf(productDTO.getQtyOnHand()));
+                }
+
+            } else {
+
+                lblQtyOnHand.setText(String.valueOf(productDTO.getQtyOnHand()));
+            }
+
+            //lblQtyOnHand.setText(String.valueOf(productDTO.getQtyOnHand()));
             lblUnitPrice.setText(String.valueOf(productDTO.getPrice()));
             productNameInCart = productDTO.getProductName();
         }
