@@ -1,0 +1,124 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="Blank_A4_Test" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="98bb3c8f-9b31-4eea-9665-3e7cf6f092e8">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<query language="SQL"><![CDATA[select * from product]]></query>
+	<field name="productId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="productId"/>
+		<property name="com.jaspersoft.studio.field.label" value="productId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+	</field>
+	<field name="productName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="productName"/>
+		<property name="com.jaspersoft.studio.field.label" value="productName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+	</field>
+	<field name="dicountId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dicountId"/>
+		<property name="com.jaspersoft.studio.field.label" value="dicountId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+	</field>
+	<field name="price" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="price"/>
+		<property name="com.jaspersoft.studio.field.label" value="price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+	</field>
+	<field name="qtyOnHand" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="qtyOnHand"/>
+		<property name="com.jaspersoft.studio.field.label" value="qtyOnHand"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+	</field>
+	<field name="recipeId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="recipeId"/>
+		<property name="com.jaspersoft.studio.field.label" value="recipeId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+	</field>
+	<group name="productId">
+		<expression><![CDATA[$F{productId}]]></expression>
+	</group>
+	<group name="productName">
+		<expression><![CDATA[$F{productName}]]></expression>
+	</group>
+	<group name="dicountId">
+		<expression><![CDATA[$F{dicountId}]]></expression>
+	</group>
+	<group name="price">
+		<expression><![CDATA[$F{price}]]></expression>
+	</group>
+	<group name="qtyOnHand">
+		<expression><![CDATA[$F{qtyOnHand}]]></expression>
+	</group>
+	<group name="recipeId">
+		<expression><![CDATA[$F{recipeId}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="80" splitType="Stretch">
+		<element kind="staticText" uuid="037f81f4-334d-4450-a454-432594ca7583" x="0" y="0" width="560" height="50" fontSize="14.0" bold="true" underline="false" hTextAlign="Center">
+			<text><![CDATA[Cakelogy Delights]]></text>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+	</title>
+	<pageHeader splitType="Stretch"/>
+	<columnHeader height="31" splitType="Stretch">
+		<element kind="staticText" uuid="04b24ac3-72ee-46ef-a8bc-9b99f49239ef" x="0" y="0" width="95" height="30" hTextAlign="Center">
+			<text><![CDATA[productId]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="254e8308-8dc8-4040-9be0-879bf2c6dc0b"/>
+		</element>
+		<element kind="staticText" uuid="e377ef9f-7c4f-4be3-9b7e-0477b8c52b6f" x="95" y="0" width="92" height="30" hTextAlign="Center">
+			<text><![CDATA[productName]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="105de19f-f8e9-49ec-9e05-66f77f5202ca"/>
+		</element>
+		<element kind="staticText" uuid="a4e89980-1bcd-45d1-8f4d-0343684ba0fa" x="187" y="0" width="92" height="30" hTextAlign="Center">
+			<text><![CDATA[dicountId]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="917a3e9c-32a9-419f-9abc-4ad74abe3e8c"/>
+		</element>
+		<element kind="staticText" uuid="17f18525-3bef-440d-aa41-f4e0edf35bdd" x="279" y="0" width="92" height="30" hTextAlign="Center">
+			<text><![CDATA[price]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2610146-2aa8-435b-922c-48c513f0bb80"/>
+		</element>
+		<element kind="staticText" uuid="e7f19893-099a-4f93-8fce-ab924547c21e" x="371" y="0" width="92" height="30" hTextAlign="Center">
+			<text><![CDATA[qtyOnHand]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc968026-6c62-4b44-a016-d7ee278fc582"/>
+		</element>
+		<element kind="staticText" uuid="5a7e23cd-258b-4308-bef1-b74a8fade9e2" x="463" y="0" width="92" height="30" hTextAlign="Center">
+			<text><![CDATA[recipeId]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3b2dd8d5-1ff2-4be4-b5ef-6c007a676731"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<element kind="textField" uuid="88f02107-8485-4508-aadd-ffeea2896e88" x="0" y="0" width="95" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{productId}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="254e8308-8dc8-4040-9be0-879bf2c6dc0b"/>
+			</element>
+			<element kind="textField" uuid="a989f937-629e-4617-a4ca-354164bdcbdb" x="95" y="0" width="92" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{productName}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="105de19f-f8e9-49ec-9e05-66f77f5202ca"/>
+			</element>
+			<element kind="textField" uuid="44e9d2d2-d5f8-4a06-ae5d-798618546193" x="187" y="0" width="92" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{dicountId}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="917a3e9c-32a9-419f-9abc-4ad74abe3e8c"/>
+			</element>
+			<element kind="textField" uuid="9007f78c-ece1-410a-9f29-3367bfc4ab1f" x="279" y="0" width="92" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{price}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2610146-2aa8-435b-922c-48c513f0bb80"/>
+			</element>
+			<element kind="textField" uuid="a0a29b46-5e76-4b78-995f-29220c4f51e2" x="371" y="0" width="92" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{qtyOnHand}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc968026-6c62-4b44-a016-d7ee278fc582"/>
+			</element>
+			<element kind="textField" uuid="8b45c889-1941-4db3-ab66-c362659fd538" x="463" y="0" width="92" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{recipeId}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3b2dd8d5-1ff2-4be4-b5ef-6c007a676731"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

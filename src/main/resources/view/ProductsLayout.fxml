@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="content" prefHeight="720.0" prefWidth="679.0" style="-fx-background-color: #F7EFE5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.professionalsoftwareproject.controller.ProductController">
+   <children>
+      <Label alignment="CENTER" layoutX="271.0" layoutY="14.0" prefHeight="39.0" prefWidth="137.0" text="Product Pane">
+         <font>
+            <Font name="Rockwell Bold" size="18.0" />
+         </font></Label>
+      <VBox layoutX="42.0" layoutY="93.0" prefHeight="534.0" prefWidth="596.0">
+         <children>
+            <HBox prefHeight="38.0" prefWidth="596.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="177.0" text="Product ID">
+                     <font>
+                        <Font name="Rockwell" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPrdId" layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="425.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="596.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="177.0" text="Product Name">
+                     <font>
+                        <Font name="Rockwell" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtProductName" prefHeight="38.0" prefWidth="425.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="86.0" prefHeight="38.0" prefWidth="596.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="177.0" text="Price">
+                     <font>
+                        <Font name="Rockwell" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtProductPrice" prefHeight="38.0" prefWidth="425.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </HBox>
+            <Pane prefHeight="33.0" prefWidth="596.0" />
+            <HBox layoutX="10.0" layoutY="124.0" prefHeight="38.0" prefWidth="596.0">
+               <children>
+                  <ComboBox fx:id="cmbDiscountPicker" prefHeight="38.0" prefWidth="130.0" promptText="Discount" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Pane layoutX="75.0" layoutY="10.0" prefHeight="38.0" prefWidth="92.0" />
+                  <Pane layoutX="232.0" layoutY="10.0" prefHeight="38.0" prefWidth="16.0" />
+                  <ComboBox fx:id="cmbQty" layoutX="101.0" layoutY="10.0" prefHeight="38.0" prefWidth="130.0" promptText="Qty" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Pane layoutX="323.0" layoutY="10.0" prefHeight="38.0" prefWidth="92.0" />
+                  <ComboBox fx:id="cmbResipePicker" layoutX="349.0" layoutY="10.0" prefHeight="38.0" prefWidth="136.0" promptText="Recipe" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </HBox>
+            <Pane layoutX="10.0" layoutY="162.0" prefHeight="32.0" prefWidth="596.0" />
+            <HBox layoutX="10.0" layoutY="86.0" prefHeight="33.0" prefWidth="596.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnSaveProductOnAction" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: FFB6C1; -fx-background-radius: 10;" stylesheets="@../cssStyles/Button.css" text="Save">
+                     <font>
+                        <Font name="Rockwell" size="14.0" />
+                     </font></Button>
+                  <Pane prefHeight="33.0" prefWidth="71.0" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: E6E6FA; -fx-background-radius: 10;" stylesheets="@../cssStyles/Button.css" text="Update">
+                     <font>
+                        <Font name="Rockwell" size="14.0" />
+                     </font></Button>
+                  <Pane layoutX="102.0" layoutY="10.0" prefHeight="33.0" prefWidth="72.0" />
+                  <Button layoutX="165.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="33.0" prefWidth="98.0" style="-fx-background-color: ECCCA2; -fx-background-radius: 10;" stylesheets="@../cssStyles/Button.css" text="Delete">
+                     <font>
+                        <Font name="Rockwell" size="14.0" />
+                     </font></Button>
+                  <Pane layoutX="257.0" layoutY="10.0" prefHeight="33.0" prefWidth="71.0" />
+                  <Button layoutX="320.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnResetOnAction" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: B9D0AA; -fx-background-radius: 10;" stylesheets="@../cssStyles/Button.css" text="Reset">
+                     <font>
+                        <Font name="Rockwell" size="14.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <Pane layoutX="10.0" layoutY="195.0" prefHeight="38.0" prefWidth="596.0" />
+            <TableView fx:id="tblProduct" onMouseClicked="#onMouseClickedOnPrdctTbl" prefHeight="246.0" prefWidth="596.0">
+              <columns>
+                <TableColumn fx:id="colPrdID" prefWidth="105.0" text="Product ID" />
+                <TableColumn fx:id="colPrdname" prefWidth="124.0" text="Product Name" />
+                  <TableColumn fx:id="colPrdQty" prefWidth="75.0" text="Qty" />
+                  <TableColumn fx:id="colDiscountId" prefWidth="75.0" text="Discount ID" />
+                  <TableColumn fx:id="colRecipeId" prefWidth="123.0" text="Recipe ID" />
+                  <TableColumn fx:id="colPrdPrice" prefWidth="93.0" text="Price" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

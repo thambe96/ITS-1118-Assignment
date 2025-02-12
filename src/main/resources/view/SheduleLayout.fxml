@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="686.0" style="-fx-background-color: #F7EFE5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.professionalsoftwareproject.controller.SheduleController">
+   <children>
+      <Label alignment="CENTER" layoutX="262.0" layoutY="14.0" prefHeight="34.0" prefWidth="162.0" text="Shedule">
+         <font>
+            <Font name="Rockwell Bold" size="18.0" />
+         </font></Label>
+      <VBox layoutX="103.0" layoutY="127.0" prefHeight="421.0" prefWidth="500.0">
+         <children>
+            <HBox prefHeight="34.0" prefWidth="500.0">
+               <children>
+                  <Label prefHeight="38.0" prefWidth="107.0" text="Shedule ID">
+                     <font>
+                        <Font name="Rockwell" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="38.0" prefWidth="48.0" />
+                  <Label fx:id="lblSheduleId" prefHeight="36.0" prefWidth="351.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="500.0">
+               <children>
+                  <Label prefHeight="38.0" prefWidth="107.0" text="Order ID">
+                     <font>
+                        <Font name="Rockwell" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="34.0" prefWidth="42.0" />
+                  <ComboBox fx:id="cmbOrderId" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="44.0" prefHeight="34.0" prefWidth="500.0">
+               <children>
+                  <Label prefHeight="38.0" prefWidth="107.0" text="Status">
+                     <font>
+                        <Font name="Rockwell" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="34.0" prefWidth="44.0" />
+                  <ComboBox fx:id="cmbStatus" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Pane layoutX="117.0" layoutY="10.0" prefHeight="34.0" prefWidth="20.0" />
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="96.0" text="Sheduled Date">
+                     <font>
+                        <Font name="Rockwell" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="237.0" layoutY="10.0" prefHeight="34.0" prefWidth="20.0" />
+                  <DatePicker fx:id="dteShedulePicker" prefHeight="34.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;" stylesheets="@../cssStyles/DatePickerStyle.css" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="78.0" prefHeight="24.0" prefWidth="500.0">
+               <children>
+                  <Pane prefHeight="24.0" prefWidth="505.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="112.0" prefHeight="33.0" prefWidth="500.0">
+               <children>
+                  <Button fx:id="btnSheduleSave" mnemonicParsing="false" onAction="#saveSheduleOnAction" prefHeight="33.0" prefWidth="105.0" style="-fx-background-color: FFB6C1; -fx-background-radius: 10;" stylesheets="@../cssStyles/Button.css" text="Save">
+                     <font>
+                        <Font name="Rockwell" size="14.0" />
+                     </font></Button>
+                  <Pane prefHeight="33.0" prefWidth="98.0" />
+                  <Button fx:id="btnSheduleUpdate" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateSheduleOnAction" prefHeight="33.0" prefWidth="105.0" style="-fx-background-color: E6E6FA; -fx-background-radius: 10;" stylesheets="@../cssStyles/Button.css" text="Update">
+                     <font>
+                        <Font name="Rockwell" size="14.0" />
+                     </font></Button>
+                  <Pane layoutX="115.0" layoutY="10.0" prefHeight="33.0" prefWidth="94.0" />
+                  <Button fx:id="btnSheduleDelete" layoutX="177.0" layoutY="10.0" mnemonicParsing="false" onAction="#delteSheduleOnAction" prefHeight="33.0" prefWidth="105.0" style="-fx-background-color: ECCCA2; -fx-background-radius: 10;" stylesheets="@../cssStyles/Button.css" text="Delete">
+                     <font>
+                        <Font name="Rockwell" size="14.0" />
+                     </font></Button>
+                  <Pane layoutX="261.0" layoutY="10.0" prefHeight="33.0" prefWidth="94.0" />
+                  <Button fx:id="btnResetShedule" layoutX="209.0" layoutY="10.0" mnemonicParsing="false" onAction="#resetSheduleOnAction" prefHeight="33.0" prefWidth="105.0" style="-fx-background-color: B9D0AA; -fx-background-radius: 10;" stylesheets="@../cssStyles/Button.css" text="Reset">
+                     <font>
+                        <Font name="Rockwell" size="14.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="112.0" prefHeight="24.0" prefWidth="500.0">
+               <children>
+                  <Pane prefHeight="24.0" prefWidth="505.0" />
+               </children>
+            </HBox>
+            <TableView fx:id="tblShedule" onMouseClicked="#onClickTable" prefHeight="236.0" prefWidth="500.0">
+               <columns>
+                  <TableColumn fx:id="colSheduleId" prefWidth="110.0" text="Shedule Id" />
+                  <TableColumn fx:id="colExpectedDate" prefWidth="161.0" text="Expected Date" />
+                  <TableColumn fx:id="colStatus" prefWidth="107.0" text="Status" />
+                  <TableColumn fx:id="colOrderId" prefWidth="121.0" text="Order ID" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

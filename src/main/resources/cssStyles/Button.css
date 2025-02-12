@@ -1,0 +1,32 @@
+/* General Button Styles */
+.button {
+    -fx-background-color: transparent; /* Light coral background #FFABAB*/
+    //-fx-text-fill: #3E2723; /* Dark brown text */
+    -fx-font-family: "Rockwell";
+    -fx-font-size: 14px;
+   // -fx-padding: 10px 20px; /* Padding for the button */
+   // -fx-border-radius: 5px; /* Rounded corners */
+    -fx-background-radius: 5px; /* Rounded corners */
+   // -fx-border-color: #4B3D3D; /* Dark chocolate border */
+    -fx-border-width: 2px; /* Border width */
+    /*-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.0, 0, 1); /* Shadow effect */
+}
+
+/* Button Hover Styles */
+.button:hover {
+    -fx-background-color: transparent; /* Golden yellow on hover #FFD54F*/
+    -fx-text-fill: #FFFFFF; /* Dark brown text #3E2723*/
+}
+
+/* Button Pressed Styles */
+.button:pressed {
+    -fx-background-color: black; /* Soft pink when pressed #F8BBD0*/
+    -fx-text-fill: white; /* Dark brown text #3E2723*/
+    -fx-effect: none; /* Remove shadow effect when pressed */
+}
+
+/* Button Focused Styles */
+.button:focused {
+    -fx-border-color: transparent; /* Cotton candy pink border when focused #FF80AB*/
+    -fx-border-width: 2px; /* Border width */
+}

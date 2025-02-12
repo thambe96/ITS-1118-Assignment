@@ -1,0 +1,58 @@
+/* General Table Styles */
+.table-view {
+    -fx-background-color: #FFF8E1; /* Light cream background */
+    -fx-border-color: #4B3D3D; /* Dark chocolate border */
+    -fx-border-width: 2px;
+    -fx-font-family: "Rockwell";
+    -fx-font-size: 14px;
+}
+
+/* Table Header Styles */
+.table-view .table-header {
+    -fx-background-color: #F8BBD0; /* Soft pink header */
+    -fx-text-fill: #3E2723; /* Dark brown text */
+    -fx-font-weight: bold;
+}
+
+/* Table Header Cell Styles */
+.table-view .table-header .table-header-cell {
+    -fx-padding: 10px;
+}
+
+/* Table Row Styles */
+.table-view .table-row {
+    -fx-background-color: #FFFFFF; /* White background for rows */
+    -fx-text-fill: #3E2723; /* Dark brown text */
+}
+
+/* Table Row Hover Styles */
+.table-view .table-row:hover {
+    -fx-background-color: #FFCCBC; /* Light peach on hover */
+}
+
+/* Selected Row Styles */
+.table-view .table-row:selected {
+    -fx-background-color: #FFD54F; /* Golden yellow for selected row */
+    -fx-text-fill: #3E2723; /* Dark brown text */
+}
+
+/* Alternating Row Colors */
+.table-view .table-row:nth-child(odd) {
+    -fx-background-color: #F1F8E9; /* Light green for odd rows */
+}
+
+/* Table Cell Styles */
+.table-view .table-cell {
+    -fx-padding: 10px;
+}
+
+/* Table Cell Focused Styles */
+.table-view .table-cell:focused {
+    -fx-border-color: #FFABAB; /* Light coral border when focused */
+    -fx-border-width: 2px;
+}
+
+/* Table Scroll Pane Styles */
+.table-view .scroll-pane {
+    -fx-background-color: transparent; /* Transparent background for scroll pane */
+}

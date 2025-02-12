@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="content" prefHeight="720.0" prefWidth="679.0" style="-fx-background-color: #F7EFE5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.professionalsoftwareproject.controller.DeshboardController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="19.0" prefHeight="50.0" prefWidth="248.0" stylesheets="@../cssStyles/DatePickerStyle.css">
+         <children>
+            <Label alignment="CENTER" layoutX="34.0" layoutY="11.0" prefHeight="29.0" prefWidth="181.0" text="Cakelogy Delights">
+               <font>
+                  <Font name="Rockwell Condensed" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="289.0" layoutY="21.0" prefHeight="31.0" prefWidth="367.0">
+         <children>
+            <Label prefHeight="31.0" prefWidth="32.0" text="Date">
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="14.0" />
+            <Label fx:id="lblDate" prefHeight="29.0" prefWidth="113.0" text="Date">
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="42.0" layoutY="10.0" prefHeight="29.0" prefWidth="14.0" />
+            <Label prefHeight="29.0" prefWidth="49.0" text="Time">
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="159.0" layoutY="10.0" prefHeight="29.0" prefWidth="14.0" />
+            <Label fx:id="lblTime" prefHeight="29.0" prefWidth="81.0" text="Time">
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="230.0" layoutY="10.0" prefHeight="29.0" prefWidth="14.0" />
+            <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#refreshDashBoardOnAction" prefHeight="31.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Refresh">
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <ImageView fitHeight="172.0" fitWidth="172.0" layoutX="106.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/vecteezy_fresh-cheesecake-with-berries-on-transparent_46456543.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="187.0" fitWidth="187.0" layoutX="428.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/vecteezy_cheesecake-with-berries-isolated-on-transparent-cutout_46456143.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="79.0" layoutY="279.0" prefHeight="103.0" prefWidth="226.0" style="-fx-background-color: ECCCA2;" styleClass="rounded-pane" stylesheets="@../cssStyles/DatePickerStyle.css">
+         <children>
+            <Label layoutX="14.0" layoutY="23.0" prefHeight="29.0" prefWidth="187.0" text="Today's Sheduled Orders">
+               <font>
+                  <Font name="Rockwell" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblShedule" alignment="CENTER" layoutX="35.0" layoutY="52.0" prefHeight="29.0" prefWidth="151.0">
+               <font>
+                  <Font name="Rockwell Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="370.0" layoutY="438.0" prefHeight="70.0" prefWidth="245.0" style="-fx-background-color: FFB6C1;" styleClass="rounded-pane" stylesheets="@../cssStyles/DatePickerStyle.css">
+         <children>
+            <Label layoutX="33.0" layoutY="14.0" prefHeight="29.0" prefWidth="199.0" text="The products running out ">
+               <font>
+                  <Font name="Rockwell" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblProductsRunningOut" alignment="CENTER" layoutX="52.0" layoutY="43.0" prefHeight="29.0" prefWidth="151.0">
+               <font>
+                  <Font name="Rockwell Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="106.0" layoutY="450.0" prefHeight="76.0" prefWidth="206.0" style="-fx-background-color: B9D0AA;" styleClass="rounded-pane" stylesheets="@../cssStyles/DatePickerStyle.css">
+         <children>
+            <Label layoutX="34.0" layoutY="14.0" prefHeight="29.0" prefWidth="110.0" text="Today's sales">
+               <font>
+                  <Font name="Rockwell" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSales" alignment="CENTER" layoutX="63.0" layoutY="38.0" prefHeight="29.0" prefWidth="81.0">
+               <font>
+                  <Font name="Rockwell Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="364.0" layoutY="279.0" prefHeight="100.0" prefWidth="266.0" style="-fx-background-color: E6E6FA;" stylesheets="@../cssStyles/DatePickerStyle.css">
+         <children>
+            <Label layoutX="25.0" layoutY="23.0" prefHeight="29.0" prefWidth="199.0" text="Customer's Birthday Count">
+               <font>
+                  <Font name="Rockwell" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNewProducts" alignment="CENTER" layoutX="61.0" layoutY="50.0" prefHeight="31.0" prefWidth="126.0">
+               <font>
+                  <Font name="Rockwell Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="rounded-pane" />
+            <String fx:value="button" />
+         </styleClass>
+      </AnchorPane>
+   </children>
+</AnchorPane>

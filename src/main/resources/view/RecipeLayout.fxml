@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.professionalsoftwareproject.controller.RecipeController">
+   <children>
+      <AnchorPane prefHeight="730.0" prefWidth="696.0" style="-fx-background-color: #F7EFE5;">
+         <children>
+            <Label alignment="CENTER" layoutX="256.0" layoutY="40.0" prefHeight="43.0" prefWidth="174.0" text="Recipe Details">
+               <font>
+                  <Font name="Rockwell Bold" size="18.0" />
+               </font>
+            </Label>
+            <VBox layoutX="93.0" layoutY="117.0" prefHeight="421.0" prefWidth="500.0">
+               <children>
+                  <HBox prefHeight="34.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="107.0" text="Recipe ID">
+                           <font>
+                              <Font name="Rockwell" size="13.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="38.0" prefWidth="48.0" />
+                        <Label fx:id="lblRecipeId" prefHeight="36.0" prefWidth="351.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;" text="R006" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="107.0" text="Recipe Name">
+                           <font>
+                              <Font name="Rockwell" size="13.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="38.0" prefWidth="48.0" />
+                        <TextField fx:id="txtRecipeName" prefHeight="34.0" prefWidth="352.0" promptText="full name" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="44.0" prefHeight="34.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="107.0" text="Desription">
+                           <font>
+                              <Font name="Rockwell" size="13.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="38.0" prefWidth="48.0" />
+                        <TextField fx:id="txtRecipeDesc" prefHeight="34.0" prefWidth="352.0" promptText="temperature" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 0px 0px 2px 0px;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="78.0" prefHeight="24.0" prefWidth="500.0">
+                     <children>
+                        <Pane prefHeight="24.0" prefWidth="505.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="112.0" prefHeight="33.0" prefWidth="500.0">
+                     <children>
+                        <Button fx:id="btnRcpSave" mnemonicParsing="false" onAction="#btnSaveRecipeOnActon" prefHeight="33.0" prefWidth="105.0" style="-fx-background-radius: 10; -fx-background-color: FFB6C1;" stylesheets="@../cssStyles/Button.css" text="Save">
+                           <font>
+                              <Font name="Rockwell" size="14.0" />
+                           </font></Button>
+                        <Pane prefHeight="33.0" prefWidth="98.0" />
+                        <Button fx:id="btnRcpUpdate" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnUpdateRecipeOnAction" prefHeight="33.0" prefWidth="105.0" style="-fx-background-radius: 10; -fx-background-color: E6E6FA;" stylesheets="@../cssStyles/Button.css" text="Update">
+                           <font>
+                              <Font name="Rockwell" size="14.0" />
+                           </font></Button>
+                        <Pane layoutX="115.0" layoutY="10.0" prefHeight="33.0" prefWidth="94.0" />
+                        <Button fx:id="btnRcpDelete" layoutX="177.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDeleteRecipeOnAction" prefHeight="33.0" prefWidth="105.0" style="-fx-background-radius: 10; -fx-background-color: ECCCA2;" stylesheets="@../cssStyles/Button.css" text="Delete">
+                           <font>
+                              <Font name="Rockwell" size="14.0" />
+                           </font></Button>
+                        <Pane layoutX="261.0" layoutY="10.0" prefHeight="33.0" prefWidth="94.0" />
+                        <Button fx:id="btnRcpReset" layoutX="209.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnRecipeReset" prefHeight="33.0" prefWidth="105.0" style="-fx-background-radius: 10; -fx-background-color: B9D0AA;" stylesheets="@../cssStyles/Button.css" text="Reset">
+                           <font>
+                              <Font name="Rockwell" size="14.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="112.0" prefHeight="24.0" prefWidth="500.0">
+                     <children>
+                        <Pane prefHeight="24.0" prefWidth="505.0" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tblRecipe" onMouseClicked="#onClickTable" prefHeight="236.0" prefWidth="500.0">
+                     <columns>
+                        <TableColumn fx:id="colRecipeId" prefWidth="98.0" text="Recipe ID" />
+                        <TableColumn fx:id="colRecipeName" prefWidth="140.0" text="Recipe Name" />
+                        <TableColumn fx:id="colRecipeDescription" prefWidth="261.0" text="Description" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

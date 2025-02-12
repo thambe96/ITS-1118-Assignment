@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="686.0" style="-fx-background-color: #F7EFE5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.professionalsoftwareproject.controller.CustomerController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="245.0" layoutY="14.0" prefHeight="47.0" prefWidth="209.0" text="Customer Details">
+         <font>
+            <Font name="Rockwell Bold" size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="60.0" layoutY="110.0" prefHeight="298.0" prefWidth="567.0">
+         <children>
+            <VBox prefHeight="181.0" prefWidth="567.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="120.0" text="Customer Id" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Rockwell" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCustomerId" layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="447.0" style="-fx-background-color: transparent; -fx-border-color: C9A0DC; -fx-border-width: 0px 0px 2px 0px;" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="567.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="120.0" text="Name">
+                           <font>
+                              <Font name="Rockwell" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCustomerName" prefHeight="30.0" prefWidth="447.0" promptText="name" style="-fx-background-color: transparent; -fx-border-color: C9A0DC; -fx-border-width: 0px 0px 2px 0px;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="82.0" prefHeight="36.0" prefWidth="567.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="120.0" text="Address">
+                           <font>
+                              <Font name="Rockwell" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCustomerAddress" prefHeight="30.0" prefWidth="447.0" promptText="Adress" style="-fx-background-color: transparent; -fx-border-color: C9A0DC; -fx-border-width: 0px 0px 2px 0px;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="118.0" prefHeight="36.0" prefWidth="567.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="120.0" text="Email">
+                           <font>
+                              <Font name="Rockwell" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCustomerEmail" prefHeight="30.0" prefWidth="447.0" promptText="example@gmail.com" style="-fx-background-color: transparent; -fx-border-color: C9A0DC; -fx-border-width: 0px 0px 2px 0px;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="46.0" prefHeight="36.0" prefWidth="567.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="120.0" text="DOB">
+                           <font>
+                              <Font name="Rockwell" size="12.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="txtCustomerDob" prefHeight="30.0" prefWidth="447.0" styleClass="table-view" stylesheets="@../cssStyles/DatePickerStyle.css" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Pane prefHeight="31.0" prefWidth="567.0" />
+            <HBox prefHeight="36.0" prefWidth="560.0">
+               <children>
+                  <Button fx:id="btnSave" layoutX="225.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="128.0" style="-fx-background-color: FFB6C1; -fx-background-radius: 10;" stylesheets="@../cssStyles/Button.css" text="Save">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="36.0" prefWidth="20.0" />
+                  <Button mnemonicParsing="false" onAction="#updateCustomerOnAction" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: E6E6FA; -fx-background-radius: 10;" stylesheets="@../cssStyles/Button.css" text="Update">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="170.0" layoutY="10.0" prefHeight="36.0" prefWidth="20.0" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#resetCustomerOnAction" prefHeight="35.0" prefWidth="124.0" style="-fx-background-color: ECCCA2; -fx-background-radius: 10;" stylesheets="@../cssStyles/Button.css" text="Reset">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="278.0" layoutY="10.0" prefHeight="36.0" prefWidth="20.0" />
+                  <Button mnemonicParsing="false" onAction="#btnDeleteCustomerOnAction" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: B9D0AA; -fx-background-radius: 10;" stylesheets="@../cssStyles/Button.css" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Pane prefHeight="29.0" prefWidth="567.0" />
+            <HBox prefHeight="36.0" prefWidth="560.0">
+               <children>
+                  <Pane prefHeight="35.0" prefWidth="24.0" />
+                  <Pane prefHeight="35.0" prefWidth="32.0" />
+                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="24.0" />
+               </children>
+            </HBox>
+            <Pane prefHeight="30.0" prefWidth="567.0" />
+         </children>
+      </VBox>
+      <HBox layoutX="38.0" layoutY="461.0" prefHeight="165.0" prefWidth="624.0">
+         <children>
+            <TableView fx:id="tblCustomer" onMouseClicked="#onClickCustomerTbl" prefHeight="165.0" prefWidth="587.0" HBox.hgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="colCustomerId" maxWidth="1.7976931348623157E308" prefWidth="111.0" text="CustomerId" />
+                <TableColumn fx:id="colCustomerName" maxWidth="1.7976931348623157E308" prefWidth="127.0" text="Name" />
+                  <TableColumn fx:id="colEmail" maxWidth="1.7976931348623157E308" prefWidth="125.0" text="Email" />
+                  <TableColumn fx:id="colDob" maxWidth="1.7976931348623157E308" prefWidth="102.0" text="dob" />
+                  <TableColumn fx:id="colAddress" maxWidth="1.7976931348623157E308" prefWidth="158.0" text="Address" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
