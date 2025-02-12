@@ -52,11 +52,6 @@ public class OrderDAOImpl implements OrderDAO {
 
     public boolean save(OrdersDTO ordersDTO) throws SQLException {
 
-        Connection connection = DBConnection.getInstance().getConnection();
-
-        try {
-            connection.setAutoCommit(false);
-
             boolean isOrderDTOSaved = SQLUtil.execute("insert into orders values (?, ?, ?, ?)",
                 ordersDTO.getOrderId(),
                 ordersDTO.getDate(),
@@ -64,27 +59,7 @@ public class OrderDAOImpl implements OrderDAO {
                 ordersDTO.getTotalAmountSpend()
             );
 
-            if (isOrderDTOSaved) {
-                boolean isOrderDetailsSaved = new OrderDetialsDAOImpl().save(ordersDTO.getOrderDetails());
-                if (isOrderDetailsSaved) {
-                    connection.commit();
-                    return true;
-                }
-
-            }
-
-            connection.rollback();
-            return false;
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
-        } finally {
-            connection.setAutoCommit(true);
-        }
-
-
-
+            return isOrderDTOSaved;
 
     }
 

@@ -9,22 +9,11 @@ import java.util.ArrayList;
 
 public class OrderDetialsDAOImpl implements OrderDetailsDAO {
 
-    public boolean save(ArrayList<OrderDetailsDTO> orderDetailsList) throws SQLException {
+    public boolean save(OrderDetailsDTO orderDetailsDTO) throws SQLException {
 
-        for (OrderDetailsDTO orderDetails : orderDetailsList) {
-            boolean orderDetialsSaved = saveOrderDetails(orderDetails);
-            if (!orderDetialsSaved) {
-                return false;
-            }
+        boolean flag = saveOrderDetails(orderDetailsDTO);
 
-            boolean isProductQtyUpdated = new ProductDAOImpl().reduceProductQuantity(orderDetails);
-            if (!isProductQtyUpdated) {
-                return false;
-            }
-
-        }
-
-        return true;
+        return flag;
     }
 
 
@@ -54,10 +43,10 @@ public class OrderDetialsDAOImpl implements OrderDetailsDAO {
         return "";
     }
 
-    @Override
-    public boolean save(OrderDetailsDTO dto) throws SQLException, ClassNotFoundException {
-        return false;
-    }
+//    @Override
+//    public boolean save(OrderDetailsDTO dto) throws SQLException, ClassNotFoundException {
+//        return false;
+//    }
 
     @Override
     public boolean update(OrderDetailsDTO dto) throws SQLException, ClassNotFoundException {

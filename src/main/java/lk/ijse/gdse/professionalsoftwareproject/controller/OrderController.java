@@ -294,6 +294,8 @@ public class OrderController implements Initializable {
         lblUnitPrice.setText("");
 
 
+
+
     }
 
 
@@ -373,12 +375,6 @@ public class OrderController implements Initializable {
         } else {
             new Alert(Alert.AlertType.INFORMATION, "Order Not Saved").show();
         }
-
-
-
-
-
-
 
     }
 
